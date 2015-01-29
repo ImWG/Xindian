@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="2dp"
+    android:orientation="vertical" >
+    
+     <ToggleButton
+         android:id="@+id/bt_start"
+         style="@style/XinyinButtonSmall"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentRight="true"
+         android:layout_centerVertical="true"
+         android:textOff="开始"
+         android:textOn="开始" />
+
+    <ToggleButton
+        android:id="@+id/bt_realTime"
+        style="@style/XinyinButtonSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:textOff="实时\n上传"
+        android:textOn="实时\n上传" />
+
+    <ToggleButton
+        android:id="@+id/bt_sava"
+        style="@style/XinyinButtonSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@id/bt_start"
+        android:textOff="保存\n一次"
+        android:textOn="保存\n一次" />
+
+    <SurfaceView
+        android:id="@+id/surfaceView_ecg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@id/bt_start"
+        android:layout_toRightOf="@+id/zoomControls_x" />
+
+    <TextView
+        android:id="@+id/textView_bp_dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/zoomControls_x"
+        android:text="X轴伸缩" />
+
+    <ZoomControls
+        android:id="@+id/zoomControls_x"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="false"
+        android:orientation="vertical" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/zoomControls_y"
+        android:text="Y轴伸缩" />
+
+    <ZoomControls
+        android:id="@+id/zoomControls_y"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:orientation="vertical" />
+
+</RelativeLayout>

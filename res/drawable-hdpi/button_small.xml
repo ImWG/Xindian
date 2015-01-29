@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- HSV: 35, 90, 30 -->
+    <item  android:state_checked="true" android:drawable="@drawable/button_small_checked" />
+    <item  android:state_checked="false" android:drawable="@drawable/button_small_normal" />
+</selector>
